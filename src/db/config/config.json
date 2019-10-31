@@ -1,0 +1,29 @@
+{
+    "development": {
+      "username": "app",
+      "password": "app@postgres",
+      "database": "app",
+      "host": "0.0.0.0",
+      "port":15432,
+      "dialect": "postgres",
+      "operatorsAliases": false
+    },
+    "test": {
+      "username": "root",
+      "password": "app@postgres", 
+      "database": "app",
+      "host": "0.0.0.0",
+      "port":15432,
+      "dialect": "postgres",
+      "operatorsAliases": false
+    },
+    "production": {
+      "username": "root",
+      "password": "app@postgres",
+      "database": "app",
+      "host": "0.0.0.0",
+      "port":15432,
+      "dialect": "postgres",
+      "operatorsAliases": false
+    }
+  }

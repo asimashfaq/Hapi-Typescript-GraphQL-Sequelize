@@ -1,0 +1,21 @@
+version: "3"
+
+# Named volumes
+volumes:
+  # Postgres Data
+  xbet-postgres:
+    driver: local
+
+services:
+  postgres:
+    container_name: xbet-postgres
+    restart: on-failure
+    image: postgres:11-alpine
+    ports:
+      - "15432:5432"
+    volumes:
+      - xbet-postgres
+    environment:
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=app@postgres
+      - POSTGRES_DB=app

@@ -1,0 +1,52 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run build && npm run dev",
+    "start-cluster": "npm run build:liveWithCluster",
+    "dev": "  cpx \"src/**/*.graphql\" dist/ && cpx \"src/casbin.conf\" dist/ && node ./dist/app.js",
+    "dev:watch": " nodemon --inspect=5645  --watch src  --exec npm run build:watch",
+    "build": "rimraf dist && tsc -p . &&   cpx \"src/**/*.graphql\" dist/ && cpx \"src/casbin.conf\" dist/",
+    "build:watch": " tsc-watch --onSuccess \" npm run dev \" --onFailure \"echo Beep! Compilation Failed\"  --compiler typescript/bin/tsc "
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-export-default-from": "^7.5.2",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/boom": "^7.3.0",
+    "@types/hapi__hapi": "^18.2.5",
+    "@types/jsonwebtoken": "^8.3.5",
+    "@types/node": "^12.12.1",
+    "@types/sequelize": "^4.28.6",
+    "cpx": "^1.5.0",
+    "eslint": "6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "nodemon": "^1.19.4",
+    "prettier": "^1.18.2",
+    "tsc-watch": "^4.0.0",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^18.4.0",
+    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "@typescript-eslint/parser": "^2.6.0",
+    "apollo-server-hapi": "^2.9.7",
+    "bcryptjs": "^2.4.3",
+    "boom": "^7.3.0",
+    "casbin": "^3.0.5",
+    "casbin-sequelize-adapter": "^2.0.0",
+    "dotenv": "^8.2.0",
+    "graphql-middleware": "^4.0.1",
+    "graphql-shield": "^7.0.0",
+    "graphql-tools": "^4.0.6",
+    "jsonwebtoken": "^8.5.1",
+    "merge-graphql-schemas": "^1.7.0",
+    "pg": "^7.12.1",
+    "sequelize": "^5.21.2",
+    "sequelize-typescript": "^1.0.0",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^4.2.1"
+  }
+}
