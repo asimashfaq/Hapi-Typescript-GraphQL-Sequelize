@@ -32,7 +32,7 @@
     "@hapi/hapi": "^18.4.0",
     "@typescript-eslint/eslint-plugin": "^2.6.0",
     "@typescript-eslint/parser": "^2.6.0",
-    "apollo-server-hapi": "^2.9.7",
+    "apollo-server-hapi": "^2.14.2",
     "bcryptjs": "^2.4.3",
     "boom": "^7.3.0",
     "casbin": "^3.0.5",
