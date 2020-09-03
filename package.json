@@ -29,7 +29,7 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
-    "@hapi/hapi": "^18.4.0",
+    "@hapi/hapi": "^19.1.1",
     "@typescript-eslint/eslint-plugin": "^2.6.0",
     "@typescript-eslint/parser": "^2.6.0",
     "apollo-server-hapi": "^2.9.7",
